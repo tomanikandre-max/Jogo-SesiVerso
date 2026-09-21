@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SesiVerso - Mega Drive</title>
+    <style>
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
+        #game { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <div id="game"></div>
+
+    <script>
+        // Configurações Oficiais do EmulatorJS apontando para o seu arquivo local
+        EJS_player = '#game';
+        EJS_core = 'segaMD'; // Core do Mega Drive
+        EJS_gameUrl = 'rom.bin'; // Como o arquivo index.html está na mesma pasta que a rom.bin, ele lê direto sem bloqueios de segurança!
+        EJS_startOnLoaded = true; // Inicia o jogo automaticamente assim que carregar
+        
+        // Puxa o motor do emulador da rede estável
+        EJS_pathtodata = 'https://emulatorjs.org'; 
+    </script>
+    <script src="https://emulatorjs.orgloader.js"></script>
+
+</body>
+</html>
